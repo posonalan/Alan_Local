@@ -1,0 +1,62 @@
+/****  GENERAL ****/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color : white; 
+}
+
+div, a, header, footer, nav, article, section {
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.topnav {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .topnav_lien {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+  }
+  .topnav_lien:hover {
+    color: #0078b4;
+  }
+  
+  /* hide responsive menu */
+/* 
+  #topnav_responsive_menu {
+    display: none;
+  } */
+  .OpenMenu{
+    height:15px; 
+  }
+
+  .colonne {
+    
+      flex-direction: column;
+  }
+  
+.sousMenu{
+    display: none;
+    }
+
+  @media only screen and (max-width: 768px) {
+    /* hide classic menu */
+    #topnav_menu {
+      flex-direction: column;
+    }
+    .sousMenu{
+    display: none;
+    }
+
+    
+}
+  

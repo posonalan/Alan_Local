@@ -1,0 +1,113 @@
+﻿<Window x:Class="GestionStockAppli.Modifier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionStockAppli"
+        mc:Ignorable="d"
+        Title="Modifier" Height="450" Width="800">
+    <Grid>
+
+
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="1*"/>
+
+            </Grid.ColumnDefinitions>
+            <Label Content="Contenue a Modifier" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center"/>
+
+            <GroupBox Header="Nouvel ajout " Grid.Row="3" Grid.Column="1">
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Libelle Article : " Grid.Row="1" Grid.Column="1"/>
+                    <TextBox x:Name="LibelleArticleAN" Grid.Row="1" Grid.Column="2"/>
+                    <Label Content="Quantite Stockee : " Grid.Row="3" Grid.Column="1"/>
+                    <TextBox x:Name="QuantiteStockeeAN" Grid.Row="3" Grid.Column="2"/>
+                    <Label Content="Id categorie : " Grid.Row="5" Grid.Column="1"/>
+                    <TextBox x:Name="IdCategorieAN" Grid.Row="5" Grid.Column="2"/>
+
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="Nouvelles valeurs" Grid.Row="3" Grid.Column="3">
+                <Grid Grid.Row="2" Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Libelle Article : " Grid.Row="1" Grid.Column="0"/>
+                    <TextBox x:Name="LibelleArticleNV" Grid.Row="1" Grid.Column="1"/>
+                    <Label Content="Quantite Stockee : " Grid.Row="3" Grid.Column="0"/>
+                    <TextBox x:Name="QuantiteStockeeNV" Grid.Row="3" Grid.Column="1"/>
+                    <Label Content="Id categorie : " Grid.Row="5" Grid.Column="0"/>
+                    <TextBox x:Name="IdCategorieNV" Grid.Row="5" Grid.Column="1"/>
+
+                </Grid>
+            </GroupBox>
+
+            <Grid Grid.Column="1" Grid.Row="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <!--<Label x:Name="labelMot" Grid.Column="1" Grid.Row="5"/>-->
+                <!--<Button x:Name="BoutonRetour" Grid.Column="4" Grid.Row="5" Click="BoutonRetour_Click" Content="Retour"   />
+                <Button x:Name="BoutonValider" Grid.Column="0" Grid.Row="5" Click="BoutonRetour_Click" Content="Valider"   />
+                <Button x:Name="BoutonAnnuler" Grid.Column="2" Grid.Row="5" Click="BoutonRetour_Click" Content="Annuler"   />-->
+            </Grid>
+            
+
+        </Grid>
+    </Grid>
+</Window>
