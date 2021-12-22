@@ -1,0 +1,186 @@
+:root {
+    --bgc1: #f5deb3;
+    --bgc2: tan;
+    --font: #074e4e;
+}
+
+/****  GENERAL ****/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div,
+a,
+header,
+footer,
+nav,
+article,
+section {
+    display: flex;
+    flex: 1;
+}
+
+img,
+video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex: 4;
+}
+.menu{
+    
+    height: min-content;
+}
+
+.titreNav,
+.menuItem {
+    font-size: 2em;
+    color: var(--font);
+    background-color: var(--bgc1);
+    padding: .8em;
+}
+
+.titreNav {
+    display: block;
+}
+
+.sousMenu {
+    display: none;
+    background-color: var(--bgc2);
+    transition: 1s;
+    /* pour éviter que le site descend */
+    position: absolute;
+    top:5.5em;
+}
+
+.sousMenuItem {
+    font-size: 1.5em;
+    color: var(--font);
+    padding: .8em;
+    justify-content: center;
+}
+
+.menuItemActive {
+    color: var(--bgc1);
+    background-color: var(--font);
+    transition: background-color 1s ;
+}
+
+.sousMenuItemActive {
+    border: 2px solid var(--font);
+}
+.decalage{
+    flex: 0;
+    background-color: #fff;
+}
+img{
+    height: 15vh; width: 20vw;
+}
+
+@media only screen and (max-width: 600px) {
+    /* hide classic menu */
+    .Menu{
+      flex-direction: row;
+    }
+    
+    .titreNav,
+.menuItem {
+    font-size: 2em;
+    color: var(--font);
+    background-color: var(--bgc1);
+    padding: .8em;
+   
+}
+    .row{
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .sousMenu {
+        display: none;
+        background-color: var(--bgc2);
+        transition: 1s;
+        /* pour éviter que le site descend */
+        position: relative;
+        top:0em;
+    }
+    /* .sousMenu{
+    display: none;
+    } */
+}
+
+a {color:inherit}
+
+.TitreNav {
+  width:30px;
+  height:2px;
+  background:white;
+  display:inline-block;
+  position:relative;
+}
+.TitreNav::before,
+.TitreNav::after {
+  content:'';
+  width:30px;
+  height:2px;
+  background:white;
+  display:inline-block;
+  position:absolute;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+.TitreNav::before {
+  top:-7px;
+}
+.TitreNav::after {
+  top:7px;
+}
+
+.TitreNav.open {
+  background:transparent;
+}
+.TitreNav.open::before {
+  transform: rotate(45deg);
+  top:0;
+}
+.TitreNav.open::after {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+header {
+  position:relative;
+  max-width:500px;
+}
+ul {
+  background:pink;
+  position:absolute;
+  width:100%;
+  left:0;
+  top:100%;
+  padding:10px 0;
+  transform:scaleY(0);
+  transform-origin:center top;
+  transition:all 0.3s ease;
+}
+ul.open {
+  transform:scaleY(1);
+}
+ul li {
+  padding:10px 0;
+  text-align:center
+}
+

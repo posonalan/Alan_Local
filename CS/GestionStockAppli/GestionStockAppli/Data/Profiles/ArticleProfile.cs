@@ -18,8 +18,6 @@ namespace GestionStockAppli.Data.Profiles
 
             CreateMap<article, ArticleDTOOut>();
             CreateMap<ArticleDTOOut, article>();
-
         }
-
     }
 }

@@ -1,0 +1,69 @@
+***  GENERAL ***
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div, a, header, footer, nav, article, section {
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+    
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    height: 5vh;
+    width: 3vw;
+}
+/*****/
+div.spoiler
+{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+     
+    background-color: lightblue;
+    display: block;
+     
+    padding: 3px;
+    min-height: 1.25em;
+}
+ 
+div.spoilerDiv
+{
+    width: 50%;
+     
+    margin-left: 10px;
+    margin-right: auto;
+}
+ 
+div.contenuSpoiler
+{
+    display: none;
+}
+ 
+.lienAfficher
+{
+    text-decoration: none;
+    cursor: hand;
+    color: darkblue;
+}
+ 
+.lienAfficher:hover
+{
+    text-decoration: underline;
+}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionStockAppli.Data.Dtos
 {
-    public class ArticleDTOIn
+    public partial class ArticleDTOIn
     {
         public ArticleDTOIn()
         { }

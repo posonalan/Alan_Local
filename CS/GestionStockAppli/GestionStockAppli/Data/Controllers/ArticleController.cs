@@ -1,12 +1,14 @@
-﻿using AutoMapper;
+﻿
 using GestionStockAppli.Data.Dtos;
 using GestionStockAppli.Data.Models;
-using GestionStockAppli.Data.Services;
 using GestionStockAppli.Data.Profiles;
+
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.JsonPatch;
 using System.Collections.Generic;
 
+using GestionStockAppli.Data.Services;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,13 +36,13 @@ namespace GestionStockAppli.Data.Controllers
         }
 
         //GET api/Article
-        [HttpGet]
-        //public ActionResult<IEnumerable<ArticleDTOIn>> GetAllArticle()
-        public IEnumerable<ArticleDTOIn> GetAllArticle()
+        //[HttpGet]
+        public ActionResult<IEnumerable<ArticleDTOIn>> GetAllArticle()
+       // public IEnumerable<article> GetAllArticle()
         {
             IEnumerable<article> listeArticle = _service.GetAllArticle();
-            //return Ok(_mapper.Map<IEnumerable<ArticleDTOIn>>(listeArticle));
-            return _mapper.Map<IEnumerable<ArticleDTOIn>>(listeArticle);
+            return Ok(_mapper.Map<IEnumerable<ArticleDTOIn>>(listeArticle));
+            //return listeArticle;
         }
 
 
